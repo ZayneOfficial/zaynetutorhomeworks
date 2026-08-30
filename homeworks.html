@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics | Grade 1 - 12</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f7ff;
+            color: #222;
+        }
+
+        header {
+            background: #053199;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grades {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .grade-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .grade-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .grade-card h2 {
+            color: #053199;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .grade-link {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 18px;
+            background: #053199;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .grade-link:hover {
+            background: #ff9800;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #053199;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .grades {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 650px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .grades {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .grades {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mathematics</h1>
+        <p>Select your Grade from Grade 1 to Grade 12</p>
+    </header>
+
+    <main class="container">
+
+        <section class="grades">
+
+            <div class="grade-card">
+                <h2>Grade 1</h2>
+                <a href="grade1-mathematics.html" class="grade-link">
+                    Grade 1 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 2</h2>
+                <a href="grade2-mathematics.html" class="grade-link">
+                    Grade 2 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 3</h2>
+                <a href="grade3.html" class="grade-link">
+                    Grade 3 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 4</h2>
+                <a href="grade4-mathematics.html" class="grade-link">
+                    Grade 4 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 5</h2>
+                <a href="grade5-mathematics.html" class="grade-link">
+                    Grade 5 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 6</h2>
+                <a href="grade6.html" class="grade-link">
+                    Grade 6 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 7</h2>
+                <a href="grade7-mathematics.html" class="grade-link">
+                    Grade 7 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 8</h2>
+                <a href="grade8-mathematics.html" class="grade-link">
+                    Grade 8 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 9</h2>
+                <a href="grade9.html" class="grade-link">
+                    Grade 9 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 10</h2>
+                <a href="grade10-mathematics.html" class="grade-link">
+                    Grade 10 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 11</h2>
+                <a href="grade11-mathematics.html" class="grade-link">
+                    Grade 11 Mathematics
+                </a>
+            </div>
+
+            <div class="grade-card">
+                <h2>Grade 12</h2>
+                <a href="grade12-mathematics.html" class="grade-link">
+                    Grade 12 Mathematics
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mathematics Learning Centre</p>
+    </footer>
+
+</body>
+</html>
+
