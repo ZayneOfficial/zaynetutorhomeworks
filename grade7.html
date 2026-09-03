@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,19 +115,116 @@
         }
 
         .submit-btn {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto 10px;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
             background: #053199;
             color: white;
-            border: none;
-            padding: 13px 28px;
-            border-radius: 7px;
-            cursor: pointer;
-            margin-top: 15px;
+            font-size: 18px;
             font-weight: bold;
-            font-size: 15px;
+            cursor: pointer;
         }
 
         .submit-btn:hover {
-            background: #ff9800;
+            background: #0b5ed7;
+        }
+
+        /* =========================
+           RESULTS
+        ========================= */
+
+        .results-box {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .results-box h2 {
+            color: #053199;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .result-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .result-summary > div {
+            padding: 20px;
+            background: #f4f7fc;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .result-summary span {
+            display: block;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .result-summary strong {
+            display: block;
+            font-size: 24px;
+            color: #053199;
+        }
+
+        .result-summary .overall {
+            background: #053199;
+            color: white;
+        }
+
+        .result-summary .overall span,
+        .result-summary .overall strong,
+        .result-summary .overall small {
+            color: white;
+        }
+
+        #feedback {
+            text-align: center;
+            margin: 25px 0;
+            color: #053199;
+        }
+
+        .answer-result {
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 10px;
+        }
+
+        .correct-result {
+            background: #e8f7ee;
+            border-left: 5px solid #28a745;
+        }
+
+        .incorrect-result {
+            background: #fff0f0;
+            border-left: 5px solid #dc3545;
+        }
+
+        .incorrect-result span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        input.correct,
+        textarea.correct {
+            border: 2px solid #28a745;
+            background: #e8f7ee;
+        }
+
+        input.incorrect,
+        textarea.incorrect {
+            border: 2px solid #dc3545;
+            background: #fff0f0;
         }
 
         footer {
@@ -138,7 +235,24 @@
             margin-top: 40px;
         }
 
+        @media (max-width: 768px) {
+
+            .result-summary {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .result-summary {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
         @media (max-width: 700px) {
+
             header h1 {
                 font-size: 28px;
             }
@@ -146,6 +260,7 @@
             .homework {
                 padding: 20px;
             }
+
         }
     </style>
 </head>
@@ -160,7 +275,7 @@
 
     <h1>Grade 7 Mathematics Homework</h1>
 
-    <p>CAPS Curriculum • Terms 1–3</p>
+    <p>CAPS Curriculum • Homework 1–3</p>
 
 </header>
 
@@ -179,7 +294,7 @@
 
 
     <!-- =====================================================
-         TERM 1
+         HOMEWORK 1
     ====================================================== -->
 
     <section class="homework">
@@ -195,123 +310,109 @@
             <strong>1.</strong>
             Calculate:
             4 578 + 2 946
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q1">
         </div>
-
 
         <div class="question">
             <strong>2.</strong>
             Calculate:
             8 000 − 3 675
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q2">
         </div>
-
 
         <div class="question">
             <strong>3.</strong>
             Calculate:
             246 × 15
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q3">
         </div>
-
 
         <div class="question">
             <strong>4.</strong>
             Calculate:
             4 536 ÷ 12
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q4">
         </div>
-
 
         <div class="question">
             <strong>5.</strong>
             Calculate:
             −8 + 15
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q5">
         </div>
-
 
         <div class="question">
             <strong>6.</strong>
             Calculate:
             −12 − 7
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q6">
         </div>
-
 
         <div class="question">
             <strong>7.</strong>
             Calculate:
             (−6) × (−4)
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q7">
         </div>
-
 
         <div class="question">
             <strong>8.</strong>
             Calculate:
             36 ÷ (−6)
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q8">
         </div>
-
 
         <div class="question">
             <strong>9.</strong>
             Simplify:
             3² + 4²
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q9">
         </div>
-
 
         <div class="question">
             <strong>10.</strong>
             Calculate:
             2³ × 2²
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q10">
         </div>
-
 
         <div class="question">
             <strong>11.</strong>
             Calculate:
             3/4 + 1/4
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q11">
         </div>
-
 
         <div class="question">
             <strong>12.</strong>
             Calculate:
             5/6 − 2/6
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q12">
         </div>
-
 
         <div class="question">
             <strong>13.</strong>
             Write 0.75 as a fraction.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q13">
         </div>
-
 
         <div class="question">
             <strong>14.</strong>
             Arrange the following numbers from smallest
             to largest:
             0.5, 0.25, 0.75, 0.1
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q14">
         </div>
-
 
         <div class="question">
             <strong>15.</strong>
             A shop gives a 10% discount on an item
             costing R250. Calculate the discount amount.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q15">
         </div>
 
 
-        <button class="submit-btn">
+        <button class="submit-btn" onclick="markHomework(1, 15)">
             Submit Homework 1
         </button>
 
@@ -319,7 +420,7 @@
 
 
     <!-- =====================================================
-         TERM 2
+         HOMEWORK 2
     ====================================================== -->
 
     <section class="homework">
@@ -335,123 +436,109 @@
             <strong>1.</strong>
             Simplify:
             5x + 3x
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q16">
         </div>
-
 
         <div class="question">
             <strong>2.</strong>
             Simplify:
             9a − 4a + 3
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q17">
         </div>
-
 
         <div class="question">
             <strong>3.</strong>
             Expand:
             3(x + 4)
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q18">
         </div>
-
 
         <div class="question">
             <strong>4.</strong>
             Expand:
             2(5x − 3)
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q19">
         </div>
-
 
         <div class="question">
             <strong>5.</strong>
             Solve:
             x + 9 = 20
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q20">
         </div>
-
 
         <div class="question">
             <strong>6.</strong>
             Solve:
             3x = 24
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q21">
         </div>
-
 
         <div class="question">
             <strong>7.</strong>
             Solve:
             2x + 5 = 17
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q22">
         </div>
-
 
         <div class="question">
             <strong>8.</strong>
             Find the next three terms:
             5, 10, 15, 20, ...
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q23">
         </div>
-
 
         <div class="question">
             <strong>9.</strong>
             Find the rule for the pattern:
             3, 6, 9, 12, 15
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q24">
         </div>
-
 
         <div class="question">
             <strong>10.</strong>
             Find the missing angle in a triangle
             if the other two angles are 50° and 65°.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q25">
         </div>
-
 
         <div class="question">
             <strong>11.</strong>
             Two angles form a straight line.
             One angle is 125°.
             Find the other angle.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q26">
         </div>
-
 
         <div class="question">
             <strong>12.</strong>
             Calculate the perimeter of a rectangle
             with length 12 cm and width 7 cm.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q27">
         </div>
-
 
         <div class="question">
             <strong>13.</strong>
             Calculate the area of a rectangle
             with length 15 cm and width 8 cm.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q28">
         </div>
-
 
         <div class="question">
             <strong>14.</strong>
             Convert 4.5 metres to centimetres.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q29">
         </div>
-
 
         <div class="question">
             <strong>15.</strong>
             A square has a side length of 9 cm.
             Calculate its area and perimeter.
-            <textarea class="answer"></textarea>
+            <textarea class="answer" id="q30"></textarea>
         </div>
 
 
-        <button class="submit-btn">
+        <button class="submit-btn" onclick="markHomework(16, 30)">
             Submit Homework 2
         </button>
 
@@ -459,7 +546,7 @@
 
 
     <!-- =====================================================
-         TERM 3
+         HOMEWORK 3
     ====================================================== -->
 
     <section class="homework">
@@ -475,126 +562,112 @@
             <strong>1.</strong>
             Simplify the ratio:
             12 : 18
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q31">
         </div>
-
 
         <div class="question">
             <strong>2.</strong>
             Simplify the ratio:
             20 : 5
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q32">
         </div>
-
 
         <div class="question">
             <strong>3.</strong>
             A car travels 180 km in 3 hours.
             Calculate its average speed.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q33">
         </div>
-
 
         <div class="question">
             <strong>4.</strong>
             If 5 pens cost R40,
             how much will 10 pens cost at the same rate?
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q34">
         </div>
-
 
         <div class="question">
             <strong>5.</strong>
             A bag contains 4 red balls and 6 blue balls.
             What is the probability of selecting a red ball?
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q35">
         </div>
-
 
         <div class="question">
             <strong>6.</strong>
             A fair six-sided die is rolled.
             What is the probability of rolling a 6?
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q36">
         </div>
-
 
         <div class="question">
             <strong>7.</strong>
             Find the mean of:
             8, 10, 12, 14 and 16.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q37">
         </div>
-
 
         <div class="question">
             <strong>8.</strong>
             Find the median of:
             5, 9, 12, 15 and 20.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q38">
         </div>
-
 
         <div class="question">
             <strong>9.</strong>
             Find the mode of:
             4, 6, 6, 8, 9, 6 and 10.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q39">
         </div>
-
 
         <div class="question">
             <strong>10.</strong>
             Find the range of:
             12, 18, 25, 9 and 30.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q40">
         </div>
-
 
         <div class="question">
             <strong>11.</strong>
             A class has 40 learners.
             28 learners passed a test.
             What percentage passed?
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q41">
         </div>
-
 
         <div class="question">
             <strong>12.</strong>
             Calculate the area of a triangle
             with a base of 12 cm and height of 9 cm.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q42">
         </div>
-
 
         <div class="question">
             <strong>13.</strong>
             Calculate the volume of a rectangular prism
             with length 8 cm, width 5 cm and height 4 cm.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q43">
         </div>
-
 
         <div class="question">
             <strong>14.</strong>
             The temperature was 18°C in the morning
             and dropped by 7°C.
             What was the new temperature?
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q44">
         </div>
-
 
         <div class="question">
             <strong>15.</strong>
             A learner's test marks are:
             65%, 70%, 75%, 80% and 90%.
             Calculate the mean mark.
-            <input class="answer" type="text">
+            <input class="answer" type="text" id="q45">
         </div>
 
 
-        <button class="submit-btn">
+        <button class="submit-btn" onclick="markHomework(31, 45)">
             Submit Homework 3
         </button>
 
@@ -603,11 +676,624 @@
 </main>
 
 
+<!-- =====================================================
+     RESULTS
+====================================================== -->
+
+<section id="results" class="results-box" style="display:none;">
+
+    <h2>🎉 Your Results</h2>
+
+    <div class="result-summary">
+
+        <div>
+            <span>Homework 1</span>
+            <strong id="homework1Score">0 / 15</strong>
+        </div>
+
+        <div>
+            <span>Homework 2</span>
+            <strong id="homework2Score">0 / 15</strong>
+        </div>
+
+        <div>
+            <span>Homework 3</span>
+            <strong id="homework3Score">0 / 15</strong>
+        </div>
+
+        <div class="overall">
+
+            <span>Overall</span>
+
+            <strong id="overallScore">
+                0 / 45
+            </strong>
+
+            <small id="percentage">
+                0%
+            </small>
+
+        </div>
+
+    </div>
+
+    <h3 id="feedback"></h3>
+
+    <div id="questionResults"></div>
+
+</section>
+
+
 <footer>
 
     <p>&copy; 2026 ZayneTutor • Grade 7 Mathematics</p>
 
 </footer>
 
+
+<script>
+
+const answers = {
+
+    // =========================
+    // HOMEWORK 1
+    // =========================
+
+    q1: "7524",
+    q2: "4325",
+    q3: "3690",
+    q4: "378",
+    q5: "7",
+    q6: "-19",
+    q7: "24",
+    q8: "-6",
+    q9: "25",
+    q10: "32",
+    q11: "1",
+    q12: "1/2",
+    q13: "3/4",
+    q14: "0.1, 0.25, 0.5, 0.75",
+    q15: "25",
+
+    // =========================
+    // HOMEWORK 2
+    // =========================
+
+    q16: "8x",
+    q17: "5a + 3",
+    q18: "3x + 12",
+    q19: "10x - 6",
+    q20: "11",
+    q21: "8",
+    q22: "6",
+    q23: "25, 30, 35",
+    q24: "3n",
+    q25: "65",
+    q26: "55",
+    q27: "38",
+    q28: "120",
+    q29: "450",
+    q30: "81 cm², 36 cm",
+
+    // =========================
+    // HOMEWORK 3
+    // =========================
+
+    q31: "2:3",
+    q32: "4:1",
+    q33: "60 km/h",
+    q34: "80",
+    q35: "2/5",
+    q36: "1/6",
+    q37: "12",
+    q38: "12",
+    q39: "6",
+    q40: "21",
+    q41: "70%",
+    q42: "54 cm²",
+    q43: "160 cm³",
+    q44: "11°C",
+    q45: "76%"
+};
+
+
+// =========================
+// CLEAN ANSWER
+// =========================
+
+function cleanAnswer(answer) {
+
+    return answer
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, " ")
+        .replace(/,/g, ", ");
+
+}
+
+
+// =========================
+// CHECK ANSWER
+// =========================
+
+function checkAnswer(userAnswer, correctAnswer, questionNumber) {
+
+    userAnswer = cleanAnswer(userAnswer);
+    correctAnswer = cleanAnswer(correctAnswer);
+
+    if (!userAnswer) {
+        return false;
+    }
+
+    if (userAnswer === correctAnswer) {
+        return true;
+    }
+
+
+    // Percentage without %
+    if (
+        correctAnswer.endsWith("%") &&
+        userAnswer === correctAnswer.replace("%", "")
+    ) {
+        return true;
+    }
+
+
+    // Rand amount
+    if (questionNumber === 15) {
+
+        const value = userAnswer
+            .replace("r", "")
+            .replace(/\s/g, "");
+
+        if (value === "25") {
+            return true;
+        }
+
+    }
+
+
+    // Accept alternative fraction
+    if (questionNumber === 12) {
+
+        if (
+            userAnswer === "3/6" ||
+            userAnswer === "1/2"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    // Accept comma spacing
+    if (questionNumber === 14) {
+
+        const value = userAnswer.replace(/\s/g, "");
+
+        if (
+            value === "0.1,0.25,0.5,0.75"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    // Homework 2 pattern
+    if (questionNumber === 23) {
+
+        const value = userAnswer.replace(/\s/g, "");
+
+        if (value === "25,30,35") {
+            return true;
+        }
+
+    }
+
+
+    // Algebra pattern rule
+    if (questionNumber === 24) {
+
+        if (
+            userAnswer === "3n" ||
+            userAnswer === "3*n" ||
+            userAnswer === "3 x n" ||
+            userAnswer === "multiply by 3"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    // Homework 2 Question 15
+    // Area = 81 cm²
+    // Perimeter = 36 cm
+    if (questionNumber === 30) {
+
+        const value = userAnswer
+            .replace(/\s+/g, " ")
+            .replace(/,/g, ",");
+
+        const hasArea =
+            value.includes("81") &&
+            (
+                value.includes("cm²") ||
+                value.includes("cm2") ||
+                value.includes("81")
+            );
+
+        const hasPerimeter =
+            value.includes("36");
+
+        if (hasArea && hasPerimeter) {
+            return true;
+        }
+
+    }
+
+
+    // Ratio formatting
+    if (
+        questionNumber === 31 ||
+        questionNumber === 32
+    ) {
+
+        const value = userAnswer
+            .replace(/\s/g, "");
+
+        const expected =
+            correctAnswer.replace(/\s/g, "");
+
+        if (value === expected) {
+            return true;
+        }
+
+    }
+
+
+    // Units: km/h
+    if (questionNumber === 33) {
+
+        const value = userAnswer
+            .replace(/\s/g, "");
+
+        if (
+            value === "60km/h" ||
+            value === "60kmh" ||
+            value === "60"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    // Probability fractions
+    if (
+        questionNumber === 35 ||
+        questionNumber === 36
+    ) {
+
+        const value =
+            userAnswer.replace(/\s/g, "");
+
+        if (value === correctAnswer) {
+            return true;
+        }
+
+    }
+
+
+    // Units: cm²
+    if (questionNumber === 42) {
+
+        const value =
+            userAnswer.replace(/\s/g, "");
+
+        if (
+            value === "54cm²" ||
+            value === "54cm2" ||
+            value === "54"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    // Units: cm³
+    if (questionNumber === 43) {
+
+        const value =
+            userAnswer.replace(/\s/g, "");
+
+        if (
+            value === "160cm³" ||
+            value === "160cm3" ||
+            value === "160"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    // Temperature
+    if (questionNumber === 44) {
+
+        const value =
+            userAnswer.replace(/\s/g, "");
+
+        if (
+            value === "11°c" ||
+            value === "11c" ||
+            value === "11"
+        ) {
+            return true;
+        }
+
+    }
+
+
+    return false;
+}
+
+
+// =========================
+// MARK HOMEWORK
+// =========================
+
+function markHomework(startQuestion, endQuestion) {
+
+    let score = 0;
+
+    let resultHTML = "";
+
+    for (
+        let i = startQuestion;
+        i <= endQuestion;
+        i++
+    ) {
+
+        const input =
+            document.getElementById(`q${i}`);
+
+        if (!input) {
+            continue;
+        }
+
+        const userAnswer =
+            input.value;
+
+        const correctAnswer =
+            answers[`q${i}`];
+
+        const correct =
+            checkAnswer(
+                userAnswer,
+                correctAnswer,
+                i
+            );
+
+
+        if (correct) {
+
+            score++;
+
+            input.classList.remove("incorrect");
+            input.classList.add("correct");
+
+            resultHTML += `
+                <div class="answer-result correct-result">
+                    <strong>
+                        Question ${i} ✓ Correct
+                    </strong>
+                </div>
+            `;
+
+        } else {
+
+            input.classList.remove("correct");
+            input.classList.add("incorrect");
+
+            resultHTML += `
+                <div class="answer-result incorrect-result">
+                    <strong>
+                        Question ${i} ✗ Incorrect
+                    </strong>
+
+                    <span>
+                        Correct answer: ${correctAnswer}
+                    </span>
+                </div>
+            `;
+
+        }
+
+    }
+
+
+    // =========================
+    // UPDATE HOMEWORK SCORE
+    // =========================
+
+    if (startQuestion === 1) {
+
+        document.getElementById(
+            "homework1Score"
+        ).textContent = `${score} / 15`;
+
+    }
+
+    if (startQuestion === 16) {
+
+        document.getElementById(
+            "homework2Score"
+        ).textContent = `${score} / 15`;
+
+    }
+
+    if (startQuestion === 31) {
+
+        document.getElementById(
+            "homework3Score"
+        ).textContent = `${score} / 15`;
+
+    }
+
+
+    // =========================
+    // CALCULATE ALL SCORES
+    // =========================
+
+    const homework1 =
+        calculateScore(1, 15);
+
+    const homework2 =
+        calculateScore(16, 30);
+
+    const homework3 =
+        calculateScore(31, 45);
+
+    const overall =
+        homework1 +
+        homework2 +
+        homework3;
+
+    const percentage =
+        Math.round((overall / 45) * 100);
+
+
+    document.getElementById(
+        "homework1Score"
+    ).textContent =
+        `${homework1} / 15`;
+
+    document.getElementById(
+        "homework2Score"
+    ).textContent =
+        `${homework2} / 15`;
+
+    document.getElementById(
+        "homework3Score"
+    ).textContent =
+        `${homework3} / 15`;
+
+    document.getElementById(
+        "overallScore"
+    ).textContent =
+        `${overall} / 45`;
+
+    document.getElementById(
+        "percentage"
+    ).textContent =
+        `${percentage}%`;
+
+
+    // =========================
+    // FEEDBACK
+    // =========================
+
+    let feedback = "";
+
+    if (percentage >= 80) {
+
+        feedback =
+            "🌟 Excellent work! Keep it up!";
+
+    }
+    else if (percentage >= 70) {
+
+        feedback =
+            "👏 Very good! You are doing well.";
+
+    }
+    else if (percentage >= 50) {
+
+        feedback =
+            "👍 Good effort! Keep practising.";
+
+    }
+    else {
+
+        feedback =
+            "📚 Keep practising. You can improve!";
+
+    }
+
+
+    document.getElementById(
+        "feedback"
+    ).textContent = feedback;
+
+
+    // =========================
+    // SHOW RESULTS
+    // =========================
+
+    document.getElementById(
+        "questionResults"
+    ).innerHTML = resultHTML;
+
+    const results =
+        document.getElementById("results");
+
+    results.style.display = "block";
+
+    results.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+// =========================
+// CALCULATE SCORE
+// =========================
+
+function calculateScore(startQuestion, endQuestion) {
+
+    let score = 0;
+
+    for (
+        let i = startQuestion;
+        i <= endQuestion;
+        i++
+    ) {
+
+        const input =
+            document.getElementById(`q${i}`);
+
+        if (!input) {
+            continue;
+        }
+
+        const userAnswer =
+            input.value;
+
+        const correctAnswer =
+            answers[`q${i}`];
+
+        if (
+            checkAnswer(
+                userAnswer,
+                correctAnswer,
+                i
+            )
+        ) {
+            score++;
+        }
+
+    }
+
+    return score;
+
+}
+
+</script>
+
 </body>
 </html>
+```
